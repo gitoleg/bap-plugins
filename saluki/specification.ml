@@ -75,8 +75,8 @@ let spec = specification [
     (* unescaped_sql append_n; *)
     (* unescaped_sql append_s; *)
     maybe_checked "malloc";
-    (* maybe_checked "calloc"; *)
-    untrusted_input "strcpy" "system";
+    maybe_checked "calloc";
+    untrusted_input "sprintf" "system";
     (* data_sanitized "fgets" "realpath" "fopen"; *)
     (* magic "read" is_black; *)
     (* magic "readv" is_black; *)
